@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en - PL">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no">
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/globalstyles.css" />
+  </head>
+  <body>
+    <header><h1>Credit&nbsp;Card Payment&nbsp;Form</h1></header>
+    <main class="container">
+      
+      <div id="card">
+        <section id="front" class="front">
+          <section class="sec-info" id="sec-info">
+            <div class="date">
+              <div>
+                <p>Name</p>
+              </div>
+              <h2 id="elementName">FULL NAME</h2>
+              <h2 id="displayName"></h2>
+            </div>
+          </section>
+          <section class="sec-numb">
+            <div><span>#</span><span>#</span><span>#</span><span>#</span></div>
+            <div><span>#</span><span>#</span><span>#</span><span>#</span></div>
+            <div><span>#</span><span>#</span><span>#</span><span>#</span></div>
+            <div><span>#</span><span>#</span><span>#</span><span>#</span></div>
+          </section>
+          <section class="sec-expire">
+            <div>
+              <div class="expires">
+                <p>Expires</p>
+              </div>
+              <div class="month">
+                <p id="p3">MM/YY</p>
+                <p id="displaydate"></p>
+              </div>
+            </div>
+            <div>
+              <img src="./photos/visa.png" alt="visa" class="img" />
+            </div>
+          </section>
+          
+        </section>
+          <section id="back" class="back">
+              <section class="block-black">
+
+              </section>
+              <section class="ccv"> 
+                <div class="ccv-text">
+                  <div>
+                    <p id="p4">XXX</p>
+                    <p id="displaycvv"></p>
+                  </div>
+                </div>
+                
+              </section>   
+              <section >
+              </div>  
+              <div class="roll-sec">
+                <img src="./photos/rollicon.svg" alt="roll" id="flip-card" class="roll">
+              </div>
+            </section>  
+          </section>      
+
+          <div class="form">
+           
+        <form action="" id="for" class="for" >
+          <section class="sec1 sec">
+            <div>
+              <p>Card Holder</p>
+              <input
+                type="text"
+                id="inputName"
+                class="input--top bot"
+                maxlength="32"
+                required
+              />
+            </div>
+            <div>
+              <p>Card Number</p>
+              <input
+                type="text"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+                class="input--top bot"
+                pattern=".{16,}"
+                maxlength="16"
+                id="inputNumber"
+                required
+              />
+            </div>
+          </section>
+          <table>
+            <tr>
+              <td><p>Expiration Date</p></td>
+              <td><p>CVV</p></td>
+            </tr>
+            <tr>
+              <td><input type="month" class="bot" id="inputDate" required /></td>
+              <td><input
+                type="text"
+                class="bot spec"
+                maxlength="3"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+                id="inputCvv"
+                pattern=".{3,}"
+                required
+              /></td>
+            </tr>
+          </table>
+          <input type="submit" value="Submit" class="button"></input>
+        </form>
+          </div>
+        <script src="index.js"></script>
+      </div>
+    </main>
+
+</body>
+</html>
